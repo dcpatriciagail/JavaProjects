@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Specials</title>
+
+    <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/cardealershipstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+
+        <!-- Navigation Bar with Collapse feature for smaller screens-->
+        <nav class="navbar navbar-expand-lg navbar-expand-custom navbar-light bg-light" style="border: thin solid #000;">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: thin solid #000;margin:0 auto;">
+                <i class="fas fa-layer-group fa-2x"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto nav-pills">
+                    <li class="nav-item active">
+                        <a href="#"><i class="fas fa-car fa"></i> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="li-spacing">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="new.html">New Inventory</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="used.html">Used Inventory</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="specials.html">Specials</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="sales.html">Sales</a>
+                        </li>
+                        <li class="li-spacing">
+                                                <!--a href="admin.html">Admin</a-->
+                                                <a href="admin.html" class="dropdown-toggle"
+                                                   data-toggle="dropdown" role="button"
+                                                   aria-haspopup="true" aria-expanded="false">Admin</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="admin.html">Admin Dashboard</a></li>
+                                                    <li><a href="users.html">Manage Users</a></li>
+                                                    <li><a href="makes.html">Manage Makes</a></li>
+                                                    <li><a href="models.html">Manage Models</a></li>
+                                                    <li><a href="adminspecials.html">Manage Specials</a></li>
+                                                    <li><a href="reports.html">View Reports</a></li>
+                                                    <li><a href="adminspecials.html">Manage Specials</a></li>
+                                                </ul>
+                                            </li>
+                </ul>
+            </div>
+            <div class="clear-float"></div>
+        </nav>
+
+        <ul class="list-group" id="errorMessages"></ul>
+
+        <!--Alert Users if JavaScript is Disabled -->
+
+        <noscript>
+            <div class="panel panel-danger">
+                <div class="panel-heading"><i class="fas fa-exclamation-triangle"></i> This site is best viewed with
+                    JavaScript enabled. Please enable in your browser's settings</div>
+            </div>
+        </noscript>
+
+
+          <section>
+       <h1>Specials</h1>
+
+<div class="content-box">
+<form>
+
+    <div class="form-row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Title</label>
+    <div class="form-group col-md-2 mb-3">
+    <input type="text" class="form-control" id="name-input">
+    </div>
+    </div>
+
+    <div class="form-row">
+    <label for="colFormLabel2" class="col-sm-2 col-form-label">Decription</label>
+    <div class="form-group col-md-4 mb-3 ">
+    <input class="form-control" style="height:70px"" id="description-input"></input>
+
+    <br>
+    <button class="btn btn-primary" id="add-special">Save</button>
+    </div>
+    </div>
+
+</form>
+</div>
+
+
+    <br>
+
+            <article id="specials">
+                  <div id="specialslist">
+
+
+
+     <div class="content-box">
+                      <button class="btn btn-danger float-right">Delete </button>
+                    <div class="col-lg-3 col-md-3">
+                        <img src="http://i68.tinypic.com/desm7o.jpg" style="width:50%">
+                    </div>
+
+                    <div class="col-lg-9 col-md-9">
+
+                            <h3 id="name-display">New specials added daily. </h3>
+                            <p id="description-display"> Check back for new deals!! </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="content-box">
+                      <button class="btn btn-danger float-right">Delete </button>
+                    <div class="col-lg-3 col-md-3">
+                        <img src="http://i68.tinypic.com/desm7o.jpg" style="width:50%">
+                    </div>
+
+                    <div class="col-lg-9 col-md-9">
+
+                            <h3 >Special Title</h3>
+                            <p >Bacon ipsum dolor amet jowl kielbasa burgdoggen bacon hamburger. Biltong salami rump, tenderloin swine venison shoulder short ribs capicola turkey hamburger pork chop sirloin kevin chicken. Pork chop rump alcatra ground round chicken swine jowl t-bone short ribs fatback. Salami alcatra pork loin sausage picanha short ribs kevin pancetta. Kielbasa ground round cupim burgdoggen. Fatback porchetta pancetta shankle ham bacon corned beef biltong short ribs ball tip sirloin cupim pork chop pork rump.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="content-box">
+                            <button class="btn btn-danger float-right">Delete </button>
+                        <div class="col-lg-3 col-md-3">
+                            <img src="http://i68.tinypic.com/desm7o.jpg" style="width:50%">
+                        </div>
+
+                        <div class="col-lg-9 col-md-9">
+                                <h3>Special Title</h3>
+                                <p>Fruitcake gingerbread lollipop sugar plum jelly beans I love dragée powder. Icing macaroon topping caramels cheesecake marzipan ice cream. I love fruitcake gummies gummi bears chocolate. Dessert muffin chocolate cake chocolate I love marshmallow sesame snaps I love jelly-o. Gummi bears lemon drops sesame snaps soufflé topping gummi bears I love I love. Bonbon bonbon wafer cake. Powder cheesecake dragée. Ice cream wafer chupa chups. Marzipan tiramisu cake dessert caramels lemon drops marzipan. I love I love I love topping croissant chocolate cake candy canes. Danish biscuit ice cream I love caramels oat cake I love. Candy pudding cake donut. Tart cupcake pie jujubes lemon drops donut I love.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-box">
+                                <button class="btn btn-danger float-right">Delete </button>
+                            <div class="col-lg-3 col-md-3">
+                                <img src="http://i68.tinypic.com/desm7o.jpg" style="width:50%">
+                            </div>
+
+                            <div class="col-lg-9 col-md-9">
+                                    <h3>Special Title</h3>
+                                    <p>Mewtwo Strikes Back Electabuzz Magcargo Mamoswine Toxicroak Rhyperior Rotom. Gotta catch 'em all Surskit consectetur adipisicing elit Chimchar Hippowdon Patrat Gengar. Fog Badge Ducklett Boulder Badge Gyarados Lopunny Arbok Regice. Pokemon The Movie 2000 Kingler Vespiquen Youngster wants to fight Aipom Yanma Registeel. Grass Zubat Mineral Badge Houndoom Virizion Hive Badge Feraligatr. </p>
+                            </div>
+                        </div>
+
+</div>
+            </article>
+        </section>
+
+
+
+        <hr />
+
+    </div>
+
+ <script src="scripts/adminspecials.js"></script>
+</body>
+
+</html>

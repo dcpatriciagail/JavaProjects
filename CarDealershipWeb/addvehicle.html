@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Add New Vehicle</title>
+
+  <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+  crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles/cardealershipstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+
+</head>
+
+
+<body>
+  <div class="container">
+
+    <!-- Navigation Bar with Collapse feature for smaller screens-->
+    <nav class="navbar navbar-expand-lg navbar-expand-custom navbar-light bg-light" style="border: thin solid #000;">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: thin solid #000;margin:0 auto;">
+      <i class="fas fa-layer-group fa-2x"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav mr-auto nav-pills">
+        <li class="nav-item active">
+          <a href="index.html"><i class="fas fa-car fa"></i> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="li-spacing">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="li-spacing">
+          <a href="new.html">New Inventory</a>
+        </li>
+        <li class="li-spacing">
+          <a href="used.html">Used Inventory</a>
+        </li>
+        <li class="li-spacing">
+          <a href="specials.html">Specials</a>
+        </li>
+        <li class="li-spacing">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li class="li-spacing">
+          <a href="sales.html">Sales</a>
+        </li>
+        <li class="li-spacing">
+          <!--a href="admin.html">Admin</a-->
+          <a href="admin.html" class="dropdown-toggle"
+          data-toggle="dropdown" role="button"
+          aria-haspopup="true" aria-expanded="false">Admin</a>
+          <ul class="dropdown-menu">
+            <li><a href="admin.html">Admin Dashboard</a></li>
+            <li><a href="users.html">Manage Users</a></li>
+            <li><a href="makes.html">Manage Makes</a></li>
+            <li><a href="models.html">Manage Models</a></li>
+            <li><a href="reports.html">View Reports</a></li>
+            <li><a href="adminspecials.html">Manage Specials</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="clear-float"></div>
+  </nav>
+            <ul class="list-group" id="errorMessages"></ul>
+  <!--Alert Users if JavaScript is Disabled -->
+
+  <noscript>
+    <div class="panel panel-danger">
+      <div class="panel-heading"><i class="fas fa-exclamation-triangle"></i> This site is best viewed with
+        JavaScript enabled. Please enable in your browser's settings</div>
+      </div>
+    </noscript>
+
+    <!-- Main Sections of Home page-->
+    <section>
+      <h2>Add Vehicle</h2>
+    </section>
+
+    <!--New Vehicle Information-->
+    <article id="add-vehicle-information">
+      <div id="add-vehicle-form-area" style="width:75%">
+        <div class="col-lg-6 col-md-6">
+
+          <div class="panel panel-success" id="formSuccess" style="display:none">
+            <div class="panel-heading"><i class="fas fa-exclamation-triangle"></i> Thank You! Information has been validated.</div>
+          </div>
+
+          <form name="newVehicleForm" action="#" onsubmit=" return validateForm()">
+            <div class="form-group">
+              <label for="make" class="required">Make</label>
+              <select id="make" class="form-control" onchange="loadModels()" required>
+                <option value="" disabled selected>Make</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="type" class="required">Type</label>
+              <select id="type" class="form-control" required>
+                <option value="new">New</option>
+                <option value="used">Used</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="year" class="required">Year</label>
+              <input type="text" class="form-control" id="year" name="year" required>
+            </div>
+
+            <div class="form-group">
+              <label for="color" class="required">Color</label>
+              <select id="color" class="form-control" required>
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Red">Red</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+                <option value="Orange">Orange</option>
+                <option value="Purple">Purple</option>
+                <option value="White">White</option>
+                <option value="Silver">Silver</option>
+                <option value="Gray">Gray</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mileage" class="required">Mileage</label>
+              <input type="text" class="form-control" id="mileage" name="mileage" required>
+            </div>
+
+            <div class="form-group">
+              <label for="msrp" class="required">MSRP</label>
+              <input type="text" class="form-control" id="msrp" name="msrp" required>
+            </div>
+          </div> <!--Ends Original DIV-->
+
+
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <label for="model" class="required">Model</label>
+              <select id="model" class="form-control" required>
+                <option value="" disabled selected>Model</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="bodyStyle" class="required">Body Style</label>
+              <select id="bodyStyle" class="form-control" required>
+                <option value="Sedan">Sedan</option>
+                <option value="Coupe">Coupe</option>
+                <option value="Truck">Truck</option>
+                <option value="Wagon">Wagon</option>
+                <option value="SUV">SUV</option>
+                <option value="Convertible">Convertible</option>
+                <option value="Hatchback">Hatchback</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="transmission" class="required">Transmission</label>
+              <select id="transmission" class="form-control" required>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="interior" class="required">Interior</label>
+              <select id="interior" class="form-control" required>
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Red">Red</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+                <option value="Orange">Orange</option>
+                <option value="Purple">Purple</option>
+                <option value="White">White</option>
+                <option value="Silver">Silver</option>
+                <option value="Gray">Gray</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="VIN" class="required">VIN #</label>
+              <input type="text" class="form-control" id="VIN" name="VIN" required>
+            </div>
+
+            <div class="form-group">
+              <label for="salesPrice" class="required">Sales Price</label>
+              <input type="text" class="form-control" id="salesPrice" name="salesPrice" required>
+            </div>
+          </div>
+
+          <div class="col-lg-12 col-md-12">
+            <label for="description" class="required">Description</label>
+            <textarea class="form-control" rows="6" id="description" name="description" required></textarea> <br />
+          </div>
+
+          <div class="col-lg-12 col-md-12">
+            <label for="photo" class="required">Picture URL</label>
+            <input type="text" class="form-control"  id="photo" name="photo"> <br /> <br />
+          </div>
+
+          <div class="col-lg-12 col-md-12">
+            <!--Submit Button section -->
+            <p><button type="submit" class="btn btn-primary" id="submit-button">Save</button></p>
+          </div>
+        </form>
+      </div> <!--Ends Form Area-->
+    </div> <!-- Container DIV-->
+  </article>
+  <script src="scripts/addvehicle.js"></script>
+</body>
+
+</html>

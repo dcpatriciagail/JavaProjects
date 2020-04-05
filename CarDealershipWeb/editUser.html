@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Edit User</title>
+    <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/cardealershipstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar with Collapse feature for smaller screens-->
+        <nav class="navbar navbar-expand-lg navbar-expand-custom navbar-light bg-light" style="border: thin solid #000;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: thin solid #000;margin:0 auto;">
+                <i class="fas fa-layer-group fa-2x"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto nav-pills">
+                    <li class="nav-item active">
+                        <a href="index.html"><i class="fas fa-car fa"></i> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="li-spacing">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="li-spacing">
+                        <a href="new.html">New Inventory</a>
+                    </li>
+                    <li class="li-spacing">
+                            <a href="used.html">Used Inventory</a>
+                        </li>
+                    <li class="li-spacing">
+                        <a href="specials.html">Specials</a>
+                    </li>
+                    <li class="li-spacing">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="li-spacing">
+                            <a href="sales.html">Sales</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="admin.html" class="dropdown-toggle"
+                                  data-toggle="dropdown" role="button"
+                                  aria-haspopup="true" aria-expanded="false">Admin</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="admin.html">Admin Dashboard</a></li>
+                                    <li><a href="users.html">Manage Users</a></li>
+                                    <li><a href="makes.html">Manage Makes</a></li>
+                                    <li><a href="models.html">Manage Models</a></li>
+                                    <li><a href="reports.html">View Reports</a></li>
+                                    <li><a href="adminspecials.html">Manage Specials</a></li>
+                              </ul>
+                        </li>
+                </ul>
+            </div>
+            <div class="clear-float"></div>
+        </nav>
+            <ul class="list-group" id="errorMessages"></ul>
+        <!-- Main Sections of the page -->
+        <div class="row">
+          <div class="col-md-12">
+            <section>
+              <article id = "edit-user">
+                <h2>Edit User</h2>
+              </article>
+            </section>
+            <br />
+            <form name="editUserForm" action="#">
+              <div class="form-group col-md-6">
+                <label for="firstName" class="required">First Name</label> <br>
+                <input type="text" class="form-control" id="firstName" name="First Name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName" class="required">Last Name</label> <br>
+                <input type="text" class="form-control" id="lastName" name="Last Name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email" class="required">Email</label> <br>
+                <input type="text" class="form-control" id="email" name="Email" required>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="role" class="required">Role</label> <br>
+                <select class="form-control" id="role" name="Role" required>
+                  <option value="" disabled selected>User Role</option>
+                  <option value="Admin">Admin</option>
+                  <option value="Disabled">Disabled</option>
+                  <option value="Sales">Sales</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="password" class="required">Password</label> <br>
+                <input type="text" class="form-control" id="password" name="Password" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="confirmPassword" class="required">Confirm Password</label> <br>
+                <input type="text" class="form-control" id="confirmPassword" name="Password" required>
+              </div>
+              <div class="form-group col-sm-2">
+                <div style="margin: 0 auto;">
+                    <!-- <input type="submit" class="btn btn-primary btn-lg"> -->
+                    <button type="button" class="btn btn-primary btn-block" id="save-edit-button">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--Alert Users if JavaScript is Disabled -->
+        <noscript>
+            <div class="panel panel-danger">
+                <div class="panel-heading"><i class="fas fa-exclamation-triangle"></i> This site is best viewed with
+                    JavaScript enabled. Please enable in your browser's settings</div>
+            </div>
+        </noscript>
+        <hr />
+    </div>
+    <script src="scripts/editUser.js"></script>
+</body>
+</html>

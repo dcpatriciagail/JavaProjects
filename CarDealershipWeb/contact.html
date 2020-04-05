@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Contact Us</title>
+
+    <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/cardealershipstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+
+    <style>
+            #contact-form {
+            margin: 30px auto;
+            padding: 40px;
+            background-color: rgb(234, 241, 247);
+            color: rgb(32, 30, 30);
+            border: thick solid #fff;
+            }
+
+            #contact-form-area {
+                margin: 0 auto;
+                width:70%;
+            }
+
+            .required {
+                font-weight: bold;
+            }
+
+            #map {
+        height: 400px;
+        width: 100%;
+       }
+
+        </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+
+        <!-- Navigation Bar with Collapse feature for smaller screens-->
+        <nav class="navbar navbar-expand-lg navbar-expand-custom navbar-light bg-light" style="border: thin solid #000;">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: thin solid #000;margin:0 auto;">
+                <i class="fas fa-layer-group fa-2x"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto nav-pills">
+                    <li class="nav-item active">
+                        <a href="index.html"><i class="fas fa-car fa"></i> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="li-spacing">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="new.html">New Inventory</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="used.html">Used Inventory</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="specials.html">Specials</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="sales.html">Sales</a>
+                        </li>
+                        <li class="li-spacing">
+                            <!--a href="admin.html">Admin</a-->
+                            <a href="admin.html" class="dropdown-toggle"
+                               data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">Admin</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="admin.html">Admin Dashboard</a></li>
+                                <li><a href="users.html">Manage Users</a></li>
+                                <li><a href="makes.html">Manage Makes</a></li>
+                                <li><a href="models.html">Manage Models</a></li>
+                                <li><a href="reports.html">View Reports</a></li>
+                                <li><a href="adminspecials.html">Manage Specials</a></li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+            <div class="clear-float"></div>
+        </nav>
+            <ul class="list-group" id="errorMessages"></ul>
+        <!--Alert Users if JavaScript is Disabled -->
+
+        <noscript>
+            <div class="panel panel-danger">
+                <div class="panel-heading"><i class="fas fa-exclamation-triangle"></i> This site is best viewed with
+                    JavaScript enabled. Please enable in your browser's settings</div>
+            </div>
+        </noscript>
+
+        <section>
+            <article id="contact">
+
+                <h2>Contact Us</h2>
+
+                            <div class="col-lg-5 col-md-5">
+                                <article id="contact-form">
+                                    <div id="contact-form-area">
+                                        <div class="panel panel-success" id="formSuccess" style="display:none">
+                                            <div class="panel-heading"><i class="fas fa-exclamation-triangle"></i> Thank You! Information has been validated.</div>
+                                        </div>
+
+                                        <form name="contactForm" action="#" onsubmit="return validateForm()" method="POST">
+                                            <div class="form-group">
+                                                  <label for="name" class="required">First Name:</label>
+                                                  <input type="text" class="form-control" id="fname" name="fname" required> <br /><br />
+                                            </div>
+
+                                            <div class="form-group">
+                                                    <label for="name" class="required">Last Name:</label>
+                                                    <input type="text" class="form-control" id="lname" name="lname" required> <br /><br />
+                                              </div>
+
+                                            <div class="form-group">
+                                                  <label for="email" class="required">Email: </label>
+                                                  <input type="text" class="form-control" id="email" name="email" required> <br /><br />
+                                            </div>
+
+                                            <div class="form-group">
+                                                  <label for="phone" class="required">Phone:</label>
+                                                  <input type="text" class="form-control" id="phone" name="phone" required> <br /><br />
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label for="info">Message</label>
+                                                <textarea class="form-control" rows="4" id="message" name="message"></textarea><br /><br />
+                                            </div>
+
+                                                <!--Submit Button section -->
+                                                <p><button type="submit" class="btn btn-primary" id="submit-button">Submit</button></p>
+                                         </form>
+                                    </div>
+                            </div>
+
+                        <div class="col-lg-7 col-md-7">
+                                <h3>Map Demo</h3>
+                                <div id="map"></div>
+                                    <script>
+                                        function initMap() {
+                                          var location = {lat: 32.81973609999999, lng: -96.86709139999999};
+                                          var map = new google.maps.Map(
+                                              document.getElementById('map'), {zoom: 13, center: location});
+                                          var marker = new google.maps.Marker({position: location, map: map});
+                                        }
+                                    </script>
+                                <script async defer
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGZL_fGmFcG245zqgEBUhWnrRByq7wQcA
+                            &callback=initMap">
+                                </script>
+                        </div>
+
+
+
+
+
+
+            </article>
+        </section>
+
+
+        <hr />
+
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/contactform.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Sales Inventory</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/cardealershipstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+        <!-- Navigation Bar with Collapse feature for smaller screens-->
+        <ul class="list-group" id="errorMessages"></ul>
+            <nav class="navbar navbar-expand-lg navbar-expand-custom navbar-light bg-light" style="border: thin solid #000;">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: thin solid #000;margin:0 auto;">
+                    <i class="fas fa-layer-group fa-2x"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto nav-pills">
+                        <li class="nav-item active">
+                            <a href="index.html"><i class="fas fa-car fa"></i> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="new.html">New Inventory</a>
+                        </li>
+                        <li class="li-spacing">
+                                <a href="used.html">Used Inventory</a>
+                            </li>
+                        <li class="li-spacing">
+                            <a href="specials.html">Specials</a>
+                        </li>
+                        <li class="li-spacing">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li class="li-spacing">
+                                <a href="sales.html">Sales</a>
+                            </li>
+                            <li class="li-spacing">
+                                <a href="admin.html" class="dropdown-toggle"
+                                      data-toggle="dropdown" role="button"
+                                      aria-haspopup="true" aria-expanded="false">Admin</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="admin.html">Admin Dashboard</a></li>
+                                        <li><a href="users.html">Manage Users</a></li>
+                                        <li><a href="makes.html">Manage Makes</a></li>
+                                        <li><a href="models.html">Manage Models</a></li>
+                                        <li><a href="reports.html">View Reports</a></li>
+                                        <li><a href="adminspecials.html">Manage Specials</a></li>
+                                  </ul>
+                            </li>
+                    </ul>
+                </div>
+                <div class="clear-float"></div>
+            </nav>
+            <ul class="list-group" id="errorMessages"></ul>
+            <div class="content-box" style="width:90%">
+            <h4>Filters</h4>
+            <form action="/action_page.php" class="form-horizontal ">
+                <div class="col-lg-3 col-md-3">
+                    <div class="row">
+                       <span style="margin: 8px;"><Strong>User</Strong></span>
+                        <div class="col-sm-4" style="margin: .5px;">
+                            <div class="form-group" id="user-selection-div">
+                                <select id="user-selection" class="form-control" style="width:200%">
+                                    <option value="" disabled selected>-All-</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!--End Search-->
+        <!-- Price Drop Down-->
+        <div class="col-lg-4 col-md-4" style="display:inline-block;">
+                <div class="row">
+                        <!-- PRICE MIN -->
+                        <span style="margin: 8px;"><Strong>From Date</Strong></span>
+                        <div class="active-cyan-4 mb-4">
+                          <input class="form-control date-format" type="text" placeholder="YYYY-MM-DD" aria-label="From Date" id="from-search-value" readOnly>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- MIN YEAR-->
+                    <!-- Price Drop Down-->
+        <div class="col-lg-4 col-md-4" style="display:inline-block;">
+                <div class="row">
+                        <!-- PRICE MAX -->
+                        <span style="margin: 8px;"><Strong>To Date</Strong></span>
+                        <div class="active-cyan-4 mb-4">
+                          <input class="form-control date-format" type="text" placeholder="YYYY-MM-DD" aria-label="To Date" id="to-search-value" readOnly>
+                        </div>
+                    </div>
+
+          </div><br><br><br>
+
+
+          <div class="col-lg-12 col-md-12">
+          <div class="row">
+              <div style="margin: 0 auto;">
+              <!-- <input type="submit" class="btn btn-primary btn-lg"> -->
+              <button type="button" class="btn btn-primary btn-lg btn-block" id="search-button">Search</button>
+              </div>
+            </div>
+        </div>
+
+        </form> <!--End of form Data-->
+         </div> <!--Ends Search Content Box-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Sales Report</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                   <h4>Search Results</h4>
+                </div>
+            </div>
+            <div class="row" id="newVehicleTableDiv">
+                <div class="col-md-6">
+                    <table class="table table-bordered" id="newVehicleTable">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Total Sales</th>
+                                <th>Total Vehicles</th>
+                            </tr>
+                        </thead>
+                        <tbody id="newTableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="scripts/jquery-2.2.4.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script> -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="scripts/salesReport.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+    </body>
+</html>
