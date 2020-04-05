@@ -49,7 +49,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+<<<<<<< HEAD
 
+=======
+// commit
+// testBranch
+>>>>>>> 119db022cb959ec2528d042323a4f0583d708bbb
 /**
  *
  * @author Patricia
